@@ -12,3 +12,6 @@ class Persona(models.Model):
     email=models.EmailField(max_length=100)
     dateCreated=models.DateField(auto_now=True)
     estado=models.CharField(max_length=100,choices=ESTADO_CHOICES,default='activo')
+
+    def __str__(self):
+        return self.name
